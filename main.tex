@@ -1,0 +1,74 @@
+\documentclass[a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[MeX]{polski}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{float}
+\usepackage{natbib}
+\usepackage{graphicx}
+\usepackage{listings}
+\usepackage[euler]{textgreek}
+\usepackage{nowidow}
+\usepackage{subfiles}
+\usepackage{geometry}
+\usepackage{makecell}
+\usepackage{ragged2e}
+\usepackage{wrapfig}
+\usepackage{subfig}
+\usepackage{multicol}
+\usepackage[export]{adjustbox}
+\usepackage{xcolor}
+\usepackage{blindtext}
+\usepackage{hyperref}
+
+\begin{document}
+
+\begin{titlepage}
+    \begin{center}
+        \vspace*{1cm}
+            
+        \Huge
+        \textbf{UMIR}
+            
+        \vspace{0.5cm}
+        \LARGE
+        Raport z projektu "zdjęcia dronów"
+            
+        \vspace{1.5cm}
+            
+        Zespół 8:\\
+        \textbf{Kazimierz Roman\\
+                Artur Romaniuk\\
+                Karol Duszczyk}
+            
+        \vfill
+
+        \vspace{0.8cm}
+            
+        \Large
+        \today
+        
+            
+    \end{center}
+\end{titlepage}
+
+\tableofcontents
+
+\newpage
+
+\section{Dane}
+\input{dataset.tex}
+
+\section{Zadanie 1: Uczenie klasyfikatora}
+\input{z1.tex}
+
+\section{Zadanie 2: Uczenie sieci głębokiej}
+\input{z2.tex}
+
+\section{Zadanie 3: Wizualizacja}
+\input{z3.tex}
+
+\section{Podsumowanie}
+\input{podsumowanie.tex}
+
+\end{document}
