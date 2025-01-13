@@ -1,3 +1,12 @@
 \subsection{Dataset}
+W projekcie użyliśmy zbioru zdjęć \href{https://www.kaggle.com/datasets/cybersimar08/drone-detection}{\textit{Drone Detection}}. Zbiór ten zawiera 4 klasy: 0 - samolot, 1 - dron, 2 - helikopter, 3 - ptak.
 
 \subsection{Data augmentation}
+
+W każdym zadaniu zastosowano augmentację danych. Zastosowano następujące transformacje:
+\begin{itemize}
+    \item Random Rotation - obrót o losowy kąt z zakresu $(-54^{\circ} , +54^{\circ})$ (factor=0.15)
+    \item Random Translation - przesunięcie o losową wartość z zakresu $(-10\%, +10\%)$ (height\_factor=0.1, width\_factor=0.1)
+    \item Random Flip - losowe odbicie w poziomie lub pionie
+    \item Random Contrast - losowa zmiana kontrastu z zakresu $(-10\%, +10\%)$ (factor=0.1)
+\end{itemize}
