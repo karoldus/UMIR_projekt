@@ -32,10 +32,24 @@ Wyniki procesu uczenia, przedstawione na wykresach (Rys.~\ref{fig:loss_accuracy}
 
 \begin{figure}[h!]
     \centering
-    \includegraphics[width=0.9\textwidth]{image.png}
+    \includegraphics[width=0.9\textwidth]{loss.png}
     \caption{Wykresy funkcji straty i dokładności dla zbiorów treningowego i walidacyjnego.}
     \label{fig:loss_accuracy}
 \end{figure}
+
+\begin{table}[h!]
+\centering
+\begin{tabular}{|c|c|c|c|c|}
+\hline
+\textbf{} & \textbf{Klasa 0} & \textbf{Klasa 1} & \textbf{Klasa 2} & \textbf{Klasa 3} \\ \hline
+\textbf{Klasa 0} & 41 & 39 & 46 & 2 \\ \hline
+\textbf{Klasa 1} & 26 & 206 & 2 & 0 \\ \hline
+\textbf{Klasa 2} & 4 & 7 & 97 & 3 \\ \hline
+\textbf{Klasa 3} & 29 & 51 & 32 & 11 \\ \hline
+\end{tabular}
+\caption{Macierz pomyłek dla zbioru testowego.}
+\label{tab:confusion_matrix_last_layer}
+\end{table}
 
 \subsection{Zastąpienie klasyfikatora sieci SVM}
 W celu poprawy klasyfikacji, cechy wyodrębnione z ostatniej warstwy modelu EfficientNetB0 zostały wykorzystane do uczenia klasyfikatora SVM z różnymi jądrami. Wyniki klasyfikacji zostały ocenione za pomocą miar takich jak precision, recall i F1-score.
@@ -49,20 +63,12 @@ W celu poprawy klasyfikacji, cechy wyodrębnione z ostatniej warstwy modelu Effi
 
 \subsubsection{Macierze pomyłek}
 Macierze pomyłek dla każdego jądra pozwoliły na identyfikację klas trudniejszych do rozróżnienia, co przedstawiono w poniższym przykładzie dla jądra liniowego (Tabela~\ref{tab:confusion_matrix_linear}).
-
-\begin{table}[h!]
-\centering
-\begin{tabular}{|c|c|c|c|c|}
-\hline
-\textbf{} & \textbf{Klasa 0} & \textbf{Klasa 1} & \textbf{Klasa 2} & \textbf{Klasa 3} \\ \hline
-\textbf{Klasa 0} & 113 & 0 & 7 & 8 \\ \hline
-\textbf{Klasa 1} & 16 & 216 & 0 & 2 \\ \hline
-\textbf{Klasa 2} & 3 & 0 & 108 & 0 \\ \hline
-\textbf{Klasa 3} & 19 & 6 & 10 & 88 \\ \hline
-\end{tabular}
-\caption{Macierz pomyłek dla klasyfikatora SVM z jądrem liniowym.}
-\label{tab:confusion_matrix_linear}
-\end{table}
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.9\textwidth]{svm.png}
+    \caption{Wykresy funkcji straty i dokładności dla zbiorów treningowego i walidacyjnego.}
+    \label{fig:loss_accuracy}
+\end{figure}
 
 \subsection{Podsumowanie}
 Porównanie wyników klasyfikacji dla różnych jąder SVM wykazało, że jądra kwadratowe i RBF osiągają wyższą dokładność niż jądro liniowe, co sugeruje lepsze odwzorowanie granic decyzyjnych w bardziej złożonych przestrzeniach. Wyniki te wskazują na możliwość dalszej poprawy wydajności modelu poprzez dostrojenie hiperparametrów klasyfikatora.
