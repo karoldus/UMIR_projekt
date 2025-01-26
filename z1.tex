@@ -1,5 +1,3 @@
-\section{Zadanie 1 - Uczenie klasyfikatora}
-
 \subsection{Opis zadania}
 Celem tego zadania było wykorzystanie wstępnie wytrenowanej sieci do uczenia wyłącznie części klasyfikującej (ostatnich warstw o połączeniach kompletnych). Następnie wyniki klasyfikacji zostały przeanalizowane. Kolejnym krokiem było zastąpienie części klasyfikującej sieci klasyfikatorem SVM z różnymi jądrami: liniowym, kwadratowym (poly) oraz RBF. Wyniki klasyfikacji dla każdego jądra zostały porównane, a szczególna uwaga została poświęcona efektowi dopuszczenia błędnych klasyfikacji.
 
@@ -32,7 +30,7 @@ Wyniki procesu uczenia, przedstawione na wykresach (Rys.~\ref{fig:loss_accuracy}
 
 \begin{figure}[h!]
     \centering
-    \includegraphics[width=0.9\textwidth]{loss.png}
+    \includegraphics[width=0.9\textwidth]{img/loss.png}
     \caption{Wykresy funkcji straty i dokładności dla zbiorów treningowego i walidacyjnego.}
     \label{fig:loss_accuracy}
 \end{figure}
@@ -62,12 +60,12 @@ W celu poprawy klasyfikacji, cechy wyodrębnione z ostatniej warstwy modelu Effi
 \end{itemize}
 
 \subsubsection{Macierze pomyłek}
-Macierze pomyłek dla każdego jądra pozwoliły na identyfikację klas trudniejszych do rozróżnienia, co przedstawiono w poniższym przykładzie dla jądra liniowego (Tabela~\ref{tab:confusion_matrix_linear}).
+Macierze pomyłek dla każdego jądra pozwoliły na identyfikację klas trudniejszych do rozróżnienia, co przedstawiono na rysunku~\ref{fig:confusion_matrix}.
 \begin{figure}[h!]
     \centering
-    \includegraphics[width=0.9\textwidth]{svm.png}
-    \caption{Wykresy funkcji straty i dokładności dla zbiorów treningowego i walidacyjnego.}
-    \label{fig:loss_accuracy}
+    \includegraphics[width=0.9\textwidth]{img/svm.png}
+    \caption{Macierze pomyłek dla różnych jąder SVM.}
+    \label{fig:confusion_matrix}
 \end{figure}
 
 \subsection{Podsumowanie}
